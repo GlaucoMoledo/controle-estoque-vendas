@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Controle de Estoque e Venda",
+    "slug": "controle-estoque-venda",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#2196F3",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Este app precisa de acesso à câmera para tirar fotos dos produtos e ler códigos de barras.",
+        "NSPhotoLibraryUsageDescription": "Este app precisa de acesso à galeria para selecionar fotos dos produtos."
+      }
+    },
+    "android": {
+      "package": "br.com.estacio.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#2196F3"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Permite que o app acesse a câmera para ler códigos de barras."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O app precisa acessar suas fotos para adicionar imagens aos produtos.",
+          "cameraPermission": "O app precisa acessar a câmera para tirar fotos dos produtos."
+        }
+      ]
+    ]
+  }
+}
+
